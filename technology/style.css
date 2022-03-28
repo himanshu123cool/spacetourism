@@ -1,0 +1,664 @@
+/* CSS RESET  */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+:root{
+    --color : #fff;
+}
+
+#technology{
+    background-image: url('../image/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#header{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 0 3.5rem;
+}
+
+#navbar{
+    width: 57vw;
+    padding: 2.3rem 4rem;
+    backdrop-filter: blur(7rem);
+    position: relative;
+}
+
+#navbar::before{
+    content: '';
+    position: absolute;
+    width: 33vw;
+    height: 0.2px;
+    background-color: grey;
+    top: 50%;
+    left: -55%;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-links>li>a{
+    text-decoration: none;
+    color: var(--color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    padding: 2.2rem 0;
+}
+
+.nav-links>li>a>span{
+    font-weight: bold;
+}
+
+
+.active{
+    border-bottom: 3px solid var(--color);
+}
+
+.nav-links>li>a:hover{
+    border-bottom: 3px solid grey;
+}
+
+.hamburger{
+    display: none;
+}
+
+
+
+#main{
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+}
+
+.main-box{
+    width: 90%;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    grid-template-rows: 10% 80%;
+    gap: 2rem 1rem;
+}
+
+.main-heading{
+    grid-column: 1/3;
+}
+
+.main-heading>p{
+    color: var(--color);
+    font-size: 1.6rem;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+}
+
+.main-heading>p>span{
+    color: grey;
+    font-weight: bold;
+    padding: 0 1.5rem;
+}
+
+.left-main{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    padding: 3rem 1rem;
+}
+
+.heading{
+    font-size: 1.6rem;
+    color: rgb(228, 227, 227);
+    letter-spacing: 2px;
+}
+
+.satelite-name{
+    font-family: 'Bellefair', serif;
+    color: var(--color);
+    font-size: 3.5rem;
+}
+
+.para{
+    color: var(--color);
+    font-size: 1.1rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.btn{
+    display:block;
+    width: 50px;
+    height: 40px;
+    font-size: 2rem;
+    border: 1px solid grey;
+    outline: none;
+    background-color: transparent;
+    color: var(--color);
+    margin: 1.5rem 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border: 1px solid var(--color);
+}
+
+.btn-active{
+    background-color: var(--color);
+    color: #000;
+}
+
+.right-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-main>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* desktop  */
+
+@media (min-width:1025px) and (max-width:1200px){
+
+    #navbar{
+        width: 70vw;
+    }
+
+    #navbar::before{
+        content: '';
+        position: absolute;
+        width: 20vw;
+        height: 0.2px;
+        background-color: grey;
+        top: 50%;
+        left: -25%;
+    }
+
+    .main-box{
+        width: 95%;
+    }
+
+}
+
+
+
+/* laptop */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    #navbar{
+        width: 90vw;
+        padding: 2.3rem 2rem;
+    }
+
+    .logo{
+        padding: 0 2rem;
+    }
+
+    #navbar::before{
+        content: '';
+        position: absolute;
+        width: 7vw;
+        height: 0.2px;
+        background-color: grey;
+        top: 50%;
+        left: -3%;
+    }
+
+    .main-box{
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: 10% 90%;
+        gap: 1rem;
+        margin: 3rem 0 8rem 0;
+    }
+
+    .left-main{
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    .btn{
+        margin: 3rem auto;
+    }
+
+    .para{
+        font-size: 1.1rem;
+    }
+
+    .right-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-main>img{
+        height: 70%;
+    }
+
+}
+
+
+
+/* tablet  */
+
+@media (min-width:481px) and (max-width:768px){
+
+    #technology{
+        background-image: url('../image/technology/background-technology-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }    
+
+    #navbar{
+        display: none;
+    }
+
+    .logo{
+        padding: 0 1rem;
+    }
+
+    .hamburger{
+        display: inline;
+        padding: 1rem;
+    }
+
+    .hamburger-navbar{
+        position: fixed;
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(7rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: 99999;
+    }
+    
+    .hamburger-navbar>ul{
+        list-style: none;
+    }
+
+    .hamburger-navbar>ul>li{
+       padding: 1.5rem 1rem;
+       font-size: 1.1rem;
+    }
+
+    .hamburger-navbar>ul>li>a{
+        color: var(--color);
+        text-decoration: none;
+        border: none;
+    }
+
+    #open{
+        font-size: 1.7rem;
+        color: var(--color);
+    }
+
+    #close{
+        color: var(--color);
+        font-size: 1.7rem;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    .main-box{
+        width: 98%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 30% 60%;
+        gap: 1rem;
+        margin: 4rem 0;
+    }
+
+    .main-heading{
+        grid-column: 1/2;
+        order: 0;
+        text-align: center;
+    }
+
+    .main-heading>p{
+        font-size: 1.2rem;
+    }
+
+    .left-main{
+        order: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 0;
+        padding: 0.5rem 0;
+        gap: 3rem;
+    }
+
+    .btn-box{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       width: 50%;
+       margin: auto;
+    }
+
+    .btn{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+    }
+
+    .main-content{
+        text-align: center;
+    }
+
+    .heading{
+        font-size: 1.4rem;
+    }
+
+    .satelite-name{
+        font-size: 1.7rem;
+    }
+
+    .right-main{
+        order: 1;
+    }
+
+}
+
+
+
+
+/* phone  */
+
+@media (min-width:320px) and (max-width:480px){
+
+    #technology{
+        background-image: url('../image/technology/background-technology-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }    
+
+    #navbar{
+        display: none;
+    }
+
+    .logo{
+        padding: 0 1rem;
+    }
+
+    .hamburger{
+        display: inline;
+        padding: 1rem;
+    }
+
+    .hamburger-navbar{
+        position: fixed;
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(7rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: 99999;
+    }
+    
+    .hamburger-navbar>ul{
+        list-style: none;
+    }
+
+    .hamburger-navbar>ul>li{
+       padding: 1.5rem 1rem;
+       font-size: 1.1rem;
+    }
+
+    .hamburger-navbar>ul>li>a{
+        color: var(--color);
+        text-decoration: none;
+        border: none;
+    }
+
+    #open{
+        font-size: 1.7rem;
+        color: var(--color);
+    }
+
+    #close{
+        color: var(--color);
+        font-size: 1.7rem;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    .main-box{
+        width: 98%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 25% 70%;
+        gap: 1rem;
+    }
+
+    .main-heading{
+        grid-column: 1/2;
+        order: 0;
+        text-align: center;
+    }
+
+    .main-heading>p{
+        font-size: 1.2rem;
+    }
+
+    .left-main{
+        order: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 30vh;
+        padding: 0.5rem 0;
+        gap: 3rem;
+    }
+
+    .btn-box{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       width: 50%;
+       margin: auto;
+    }
+
+    .btn{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+    }
+
+    .main-content{
+        text-align: center;
+    }
+
+    .heading{
+        font-size: 1.4rem;
+    }
+
+    .para{
+        font-size: 1rem;
+    }
+
+    .satelite-name{
+        font-size: 1.7rem;
+    }
+
+    .right-main{
+        order: 1;
+    }
+
+
+}
+
+
+
+
+/*mini- phone  */
+
+@media (min-width:0px) and (max-width:319px){
+
+    #technology{
+        background-image: url('../image/technology/background-technology-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }    
+
+    #navbar{
+        display: none;
+    }
+
+    .logo{
+        padding: 0 1rem;
+    }
+
+    .hamburger{
+        display: inline;
+        padding: 1rem;
+    }
+
+    .hamburger-navbar{
+        position: fixed;
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(7rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: 99999;
+    }
+    
+    .hamburger-navbar>ul{
+        list-style: none;
+    }
+
+    .hamburger-navbar>ul>li{
+       padding: 1.5rem 1rem;
+       font-size: 1.1rem;
+    }
+
+    .hamburger-navbar>ul>li>a{
+        color: var(--color);
+        text-decoration: none;
+        border: none;
+    }
+
+    #open{
+        font-size: 1.7rem;
+        color: var(--color);
+    }
+
+    #close{
+        color: var(--color);
+        font-size: 1.7rem;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    .main-box{
+        width: 98%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 25% 70%;
+        gap: 1rem;
+    }
+
+    .main-heading{
+        grid-column: 1/2;
+        order: 0;
+        text-align: center;
+    }
+
+    .main-heading>p{
+        font-size: 1.2rem;
+    }
+
+    .left-main{
+        order: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 30vh;
+        padding: 0.5rem 0;
+        gap: 3rem;
+    }
+
+    .btn-box{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       width: 50%;
+       margin: auto;
+    }
+
+    .btn{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+    }
+
+    .main-content{
+        text-align: center;
+    }
+
+    .heading{
+        font-size: 1.4rem;
+    }
+
+    .para{
+        font-size: 1rem;
+    }
+
+    .satelite-name{
+        font-size: 1.7rem;
+    }
+
+    .right-main{
+        order: 1;
+    }
+
+
+}
