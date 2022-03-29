@@ -7,6 +7,10 @@
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 :root{
     --color : #fff;
 }
@@ -19,10 +23,10 @@
 }
 
 #header{
-    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 2rem 0;
 }
 
 .logo{
@@ -82,7 +86,7 @@
 #main{
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .main-box{
